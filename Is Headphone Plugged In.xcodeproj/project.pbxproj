@@ -13,6 +13,8 @@
 		20DCCD2E1AD5DFC40068ABB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DCCD2D1AD5DFC40068ABB3 /* Images.xcassets */; };
 		20DCCD311AD5DFC40068ABB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20DCCD2F1AD5DFC40068ABB3 /* LaunchScreen.xib */; };
 		20DCCD3D1AD5DFC40068ABB3 /* Is_Headphone_Plugged_InTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DCCD3C1AD5DFC40068ABB3 /* Is_Headphone_Plugged_InTests.swift */; };
+		20DCCD471AD5E67B0068ABB3 /* song_credits.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20DCCD461AD5E67B0068ABB3 /* song_credits.txt */; };
+		20DCCD491AD5E6EC0068ABB3 /* song57_source_fish_openbsd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20DCCD481AD5E6EC0068ABB3 /* song57_source_fish_openbsd.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		20DCCD361AD5DFC40068ABB3 /* Is Headphone Plugged InTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Is Headphone Plugged InTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DCCD3B1AD5DFC40068ABB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DCCD3C1AD5DFC40068ABB3 /* Is_Headphone_Plugged_InTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Is_Headphone_Plugged_InTests.swift; sourceTree = "<group>"; };
+		20DCCD461AD5E67B0068ABB3 /* song_credits.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = song_credits.txt; sourceTree = "<group>"; };
+		20DCCD481AD5E6EC0068ABB3 /* song57_source_fish_openbsd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song57_source_fish_openbsd.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		20DCCD241AD5DFC40068ABB3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				20DCCD481AD5E6EC0068ABB3 /* song57_source_fish_openbsd.mp3 */,
+				20DCCD461AD5E67B0068ABB3 /* song_credits.txt */,
 				20DCCD251AD5DFC40068ABB3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -194,6 +200,8 @@
 			files = (
 				20DCCD2C1AD5DFC40068ABB3 /* Main.storyboard in Resources */,
 				20DCCD311AD5DFC40068ABB3 /* LaunchScreen.xib in Resources */,
+				20DCCD471AD5E67B0068ABB3 /* song_credits.txt in Resources */,
+				20DCCD491AD5E6EC0068ABB3 /* song57_source_fish_openbsd.mp3 in Resources */,
 				20DCCD2E1AD5DFC40068ABB3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

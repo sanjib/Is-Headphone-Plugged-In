@@ -1,0 +1,58 @@
+5.7: "Source Fish"
+
+Richie Pollack: vocals and harmonica.
+Jonathan Lewis: programming, bass, piano, and Hammond B3 organ.
+André Wickenheiser: trumpet.
+Lyrics by Bob Kitella.
+Produced and Recorded by Jonathan Lewis.
+
+OpenBSD 5.7 CD2 track 2 is an uncompressed copy of this song.
+
+Downlaoded from: http://www.openbsd.org/lyrics.html
+Song link: http://www.openbsd.org/songs/song57.mp3
+
+Lyrics
+
+Comin' to ya, via CVS
+All the code, that's safe to load
+Got the ProPolice, in the GCC
+Boundry checks, and Canaries
+
+I'm a Source Fish, ha ha
+Yeah I'm a Source Fish
+I'm a Source Fish
+Woah I'm a Source Fish
+
+Code used to suck, in a Big way
+But it Keeps getting better, each and every day
+OpenSSL, wasn't done by us
+With Libre ha ha, there ain't no fuss
+
+I'm a Source Fish
+Woah I'm a Source Fish
+I'm a Source Fish
+I'm a Source Fish
+
+With a secure shell, and a key or two
+You'd be amazed, at what I can do
+OpenSSH, relayd, PF, OpenNTPd
+All I am, has been used for free
+
+I'm a Source Fish, that's right
+I'm a Source Fish
+I'm a Source Fish
+Yeah I'm a Source Fish
+
+When the bullies, in that neighborhood
+Come collecting, just remember that I'm Free, I'm Free Yeah Yeah, I'm Free Yeah Yeah
+
+Instrumental
+
+I'm a Source Fish, ha
+Yes I'm a Source Fish
+You, over there You a Source Fish, ha ha
+Yeah, I'm a Source Fish
+Who that over there, He's a Source Fish, You a Source Fish, ha
+I'm a Source Fish, Yeah Yeah
+I'm a Source Fish, Yeah Yeah
+Source Fish
