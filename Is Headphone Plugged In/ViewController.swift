@@ -10,22 +10,39 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        let currentRoute = AVAudioSession.sharedInstance().currentRoute
+        for description in currentRoute.outputs {
+            if description.portType == AVAudioSessionPortHeadphones {
+                println("headphone plugged in")
+            } else {
+                println("headphone plugged out")
+            }
+        }
         
-        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "audioRouteChangeListener:",
+            name: AVAudioSessionRouteChangeNotification,
+            object: nil)
     }
+    
+    dynamic private func audioRouteChangeListener(notification:NSNotification) {
+        let audioRouteChangeReason = notification.userInfo![AVAudioSessionRouteChangeReasonKey] as UInt
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        switch audioRouteChangeReason {
+        case AVAudioSessionRouteChangeReason.NewDeviceAvailable.rawValue:
+            println("headphone plugged in")
+        case AVAudioSessionRouteChangeReason.OldDeviceUnavailable.rawValue:
+            println("headphone pulled out")
+        default:
+            break
+        }
     }
-
+    
 
 }
 
