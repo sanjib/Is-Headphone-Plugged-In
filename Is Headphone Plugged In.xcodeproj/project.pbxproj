@@ -167,6 +167,7 @@
 				TargetAttributes = {
 					20DCCD201AD5DFC40068ABB3 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = Q2PNQUM9NY;
 					};
 					20DCCD351AD5DFC40068ABB3 = {
 						CreatedOnToolsVersion = 6.2;

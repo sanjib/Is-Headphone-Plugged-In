@@ -10,17 +10,28 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    @IBOutlet weak var headphonePluggedInStateImageView: UIImageView!
+    let deviceRequiredImage = UIImage(named: "device_required")
+    let headphonePluggedInImage = UIImage(named: "headphone_plugged_in")
+    let headphonePulledOutImage = UIImage(named: "headphone_pulled_out")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let currentRoute = AVAudioSession.sharedInstance().currentRoute
-        for description in currentRoute.outputs {
-            if description.portType == AVAudioSessionPortHeadphones {
-                println("headphone plugged in")
-            } else {
-                println("headphone plugged out")
+        if currentRoute.outputs != nil {
+            for description in currentRoute.outputs {
+                if description.portType == AVAudioSessionPortHeadphones {
+                    headphonePluggedInStateImageView.image = headphonePluggedInImage
+                    println("headphone plugged in")
+                } else {
+                    headphonePluggedInStateImageView.image = headphonePulledOutImage
+                    println("headphone pulled out")
+                }
             }
+        } else {
+            headphonePluggedInStateImageView.image = deviceRequiredImage
+            println("requires connection to device")
         }
         
         NSNotificationCenter.defaultCenter().addObserver(
@@ -35,8 +46,10 @@ class ViewController: UIViewController {
 
         switch audioRouteChangeReason {
         case AVAudioSessionRouteChangeReason.NewDeviceAvailable.rawValue:
+            headphonePluggedInStateImageView.image = headphonePluggedInImage
             println("headphone plugged in")
         case AVAudioSessionRouteChangeReason.OldDeviceUnavailable.rawValue:
+            headphonePluggedInStateImageView.image = headphonePulledOutImage            
             println("headphone pulled out")
         default:
             break
