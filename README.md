@@ -1,7 +1,8 @@
 # Is-Headphone-Plugged-In
-Provides code that simply detects if user has plugged-in or pulled-out their headphone.
+This app runs Swift code that detects if user has plugged-in or pulled-out their 
+headphones from an iOS device.
 
-Requires a device to be connected for testing.
+Requires an iOS device and headphones for testing. Will not run on iOS simulator.
 
 Platform: iOS 8.x
 Language: Swift
