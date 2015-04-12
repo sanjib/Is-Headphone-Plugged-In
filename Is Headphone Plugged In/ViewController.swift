@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
     
     dynamic private func audioRouteChangeListener(notification:NSNotification) {
-        let audioRouteChangeReason = notification.userInfo![AVAudioSessionRouteChangeReasonKey] as UInt
+        let audioRouteChangeReason = notification.userInfo![AVAudioSessionRouteChangeReasonKey] as! UInt
 
         switch audioRouteChangeReason {
         case AVAudioSessionRouteChangeReason.NewDeviceAvailable.rawValue:
