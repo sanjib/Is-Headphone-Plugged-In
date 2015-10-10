@@ -19,19 +19,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let currentRoute = AVAudioSession.sharedInstance().currentRoute
-        if currentRoute.outputs != nil {
+        
+        if currentRoute.outputs.count != 0 {
             for description in currentRoute.outputs {
                 if description.portType == AVAudioSessionPortHeadphones {
                     headphonePluggedInStateImageView.image = headphonePluggedInImage
-                    println("headphone plugged in")
+                    print("headphone plugged in")
                 } else {
                     headphonePluggedInStateImageView.image = headphonePulledOutImage
-                    println("headphone pulled out")
+                    print("headphone pulled out")
                 }
             }
         } else {
             headphonePluggedInStateImageView.image = deviceRequiredImage
-            println("requires connection to device")
+            print("requires connection to device")
         }
         
         NSNotificationCenter.defaultCenter().addObserver(
@@ -47,10 +48,10 @@ class ViewController: UIViewController {
         switch audioRouteChangeReason {
         case AVAudioSessionRouteChangeReason.NewDeviceAvailable.rawValue:
             headphonePluggedInStateImageView.image = headphonePluggedInImage
-            println("headphone plugged in")
+            print("headphone plugged in")
         case AVAudioSessionRouteChangeReason.OldDeviceUnavailable.rawValue:
             headphonePluggedInStateImageView.image = headphonePulledOutImage            
-            println("headphone pulled out")
+            print("headphone pulled out")
         default:
             break
         }
