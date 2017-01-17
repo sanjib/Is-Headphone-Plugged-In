@@ -35,21 +35,21 @@ class ViewController: UIViewController {
             print("requires connection to device")
         }
         
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
-            selector: "audioRouteChangeListener:",
-            name: AVAudioSessionRouteChangeNotification,
+            selector: #selector(ViewController.audioRouteChangeListener(_:)),
+            name: NSNotification.Name.AVAudioSessionRouteChange,
             object: nil)
     }
     
-    dynamic private func audioRouteChangeListener(notification:NSNotification) {
+    dynamic fileprivate func audioRouteChangeListener(_ notification:Notification) {
         let audioRouteChangeReason = notification.userInfo![AVAudioSessionRouteChangeReasonKey] as! UInt
 
         switch audioRouteChangeReason {
-        case AVAudioSessionRouteChangeReason.NewDeviceAvailable.rawValue:
+        case AVAudioSessionRouteChangeReason.newDeviceAvailable.rawValue:
             headphonePluggedInStateImageView.image = headphonePluggedInImage
             print("headphone plugged in")
-        case AVAudioSessionRouteChangeReason.OldDeviceUnavailable.rawValue:
+        case AVAudioSessionRouteChangeReason.oldDeviceUnavailable.rawValue:
             headphonePluggedInStateImageView.image = headphonePulledOutImage            
             print("headphone pulled out")
         default:
